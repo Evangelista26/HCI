@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker - Job Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Welcome to Worker</h1>
+        <p>Discover your career path with Worker - Explore Job Categories</p>
+    </div>
+
+    <!-- Container with Job Categories -->
+    <div class="container">
+        <!-- Job Categories -->
+        <div class="job-category">
+            <span><span class="icon">🏛️</span> Architecture and Engineering</span>
+            <button class="button" onclick="openModal('Architecture and Engineering')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">🎨</span> Arts and Design</span>
+            <button class="button" onclick="openModal('Arts and Design')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">🧹</span> Building and Grounds Cleaning</span>
+            <button class="button" onclick="openModal('Building and Grounds Cleaning')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">💼</span> Business and Financial</span>
+            <button class="button" onclick="openModal('Business and Financial')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">🤝</span> Community and Social Service</span>
+            <button class="button" onclick="openModal('Community and Social Service')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">💻</span> Computer and Information Technology</span>
+            <button class="button" onclick="openModal('Computer and Information Technology')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">🔨</span> Construction and Extraction</span>
+            <button class="button" onclick="openModal('Construction and Extraction')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">📚</span> Education, Training, and Library</span>
+            <button class="button" onclick="openModal('Education, Training, and Library')">Schedule</button>
+        </div>
+        <div class="job-category">
+            <span><span class="icon">🔧</span> Home Repairs and Services</span>
+            <button class="button" onclick="toggleServices()">Show Services</button>
+        </div>
+        
+        <div id="home-services" class="home-services" style="display: none;">
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <span>Plumbing</span>
+                <button class="button" onclick="openModal('Plumbing')">Schedule & Rate</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <span>Electrical Work</span>
+                <button class="button" onclick="openModal('Electrical Work')">Schedule & Rate</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <span>Carpentry</span>
+                <button class="button" onclick="openModal('Carpentry')">Schedule & Rate</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <span>Painting</span>
+                <button class="button" onclick="openModal('Painting')">Schedule & Rate</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <span>HVAC Repair</span>
+                <button class="button" onclick="openModal('HVAC Repair')">Schedule & Rate</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Scheduling and Rating -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="service-title">Schedule Appointment</h2>
+            <form id="appointment-form">
+                <label for="date">Select Date:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+                <label for="time">Select Time:</label><br>
+                <input type="time" id="time" name="time" required><br><br>
+                <button type="submit" class="button">Confirm Appointment</button>
+            </form>
+
+            <!-- Hidden Rating Section -->
+            <div id="rating-section" style="display: none;">
+                <h2>Rate the Service</h2>
+                <div class="stars" id="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
